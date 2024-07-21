@@ -1,0 +1,47 @@
+header {
+  display: flex;
+  padding: 1.2rem 4.8rem;
+  background-color: var(--color-grey-0);
+  border-bottom: 0.2rem solid var(--color-grey-100);
+
+  gap: 1.4rem;
+  position: fixed; /* Ensure the header spans the full width */
+  z-index: 1000;
+  justify-content: end;
+  align-items: center;
+  width: 88.5%;
+  right: 0;
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    .user-name {
+      font-size: 1.6rem;
+    }
+    .Avatar {
+      width: 3rem;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      object-position: center center;
+    }
+  }
+  .icons-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 1.2rem;
+    color: var(--color-brand-600);
+
+    svg:hover {
+      cursor: pointer;
+    }
+    button {
+      font-size: 1.8rem;
+      gap: 1.2rem;
+      color: var(--color-brand-600);
+      border: none;
+      background-color: var(--color-grey-0);
+    }
+  }
+}

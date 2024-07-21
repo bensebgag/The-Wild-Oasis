@@ -1,0 +1,121 @@
+.Booking {
+  max-width: 120rem;
+  margin: 12.8rem auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4.8rem;
+    button {
+      font-size: 1.8rem;
+      border: none;
+      background-color: var(--color-grey-0);
+      color: var(--color-brand-700);
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      h1 {
+        font-size: 2.4rem;
+        font-weight: 600;
+      }
+    }
+  }
+  .body {
+    border: 1px solid #ccc;
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2.4rem 4.8rem;
+      color: var(--color-grey-0);
+      background-color: var(--color-brand-700);
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+    &__body {
+      padding: 4.8rem;
+      display: flex;
+      flex-direction: column;
+      .gest {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 500;
+        gap: 1.2rem;
+      }
+      .breakfast {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--color-yellow-100);
+        padding: 1.2rem 2.4rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+        color: var(--color-yellow-700);
+        div {
+          span:nth-child(2) {
+            font-weight: 400;
+            margin-left: 3.2rem;
+          }
+        }
+      }
+      .booked_day {
+        margin-left: auto;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+    }
+  }
+  .buttons {
+    margin-left: auto;
+    button {
+      border: none;
+      margin-left: 1.2rem;
+      margin-top: 2.4rem;
+      font-weight: 600;
+      padding: 0.8rem 1.6rem;
+      border-radius: 6px;
+    }
+    .check {
+      background-color: var(--color-brand-600);
+      color: var(--color-brand-50);
+      border: 1px solid var(--color-grey-0);
+      border-radius: 5px;
+    }
+    .check:hover {
+      color: var(--color-brand-50);
+      background-color: var(--color-brand-700);
+    }
+  }
+
+  .delete {
+    background-color: var(--color-red-700);
+    color: var(--color-red-100);
+    margin-right: 5px;
+  }
+  .delete:hover {
+    background-color: var(--color-red-800);
+  }
+
+  .back {
+    background-color: var(--color-grey-0);
+    color: var(--color-grey-700);
+    border: 1px solid var(--color-grey-300);
+    margin-right: 5px;
+  }
+  .back:hover {
+    background-color: var(--color-grey-50);
+    color: var(--color-grey-600);
+  }
+}

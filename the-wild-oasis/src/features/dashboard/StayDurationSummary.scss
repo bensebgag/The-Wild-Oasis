@@ -1,0 +1,59 @@
+.PieChartContainer {
+  border: 1px solid var(--color-grey-100);
+  background-color: var(--color-grey-0);
+  padding: 2.4rem 3rem;
+  .title {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    ul {
+      list-style: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+
+      li {
+        display: flex; // Add this line to align items horizontally
+        align-items: center; // Add this line to center items vertically
+        margin-bottom: 1rem; // Add this line to add space between list items
+        gap: 4px;
+        span.circle {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          display: inline-block; // Ensure it takes the right shape
+          // Add space between the circle and text
+        }
+      }
+      .orangeColor {
+        color: #f97316;
+        .circle {
+          background-color: #f97316;
+        }
+      }
+
+      .yellowColor {
+        color: #eab308;
+        .circle {
+          background-color: #eab308;
+        }
+      }
+      .greenColor {
+        color: #84cc16;
+        .circle {
+          background-color: #84cc16;
+        }
+      }
+      .blueColor {
+        color: #14b8a6;
+        .circle {
+          background-color: #14b8a6;
+        }
+      }
+    }
+  }
+}

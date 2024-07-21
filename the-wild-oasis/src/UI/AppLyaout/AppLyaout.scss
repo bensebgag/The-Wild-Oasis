@@ -1,0 +1,10 @@
+.Lyout {
+  display: flex;
+  width: 100%;
+  main {
+    width: 100%;
+    background-color: var(--color-grey-50);
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}

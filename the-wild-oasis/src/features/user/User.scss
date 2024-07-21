@@ -1,0 +1,64 @@
+.userContainer {
+  max-width: 94rem;
+  margin: 12.8rem auto;
+  height: 100vh;
+  .user {
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin-bottom: 1.6rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-grey-0);
+
+      .fields {
+        display: flex;
+        flex-direction: column;
+        padding: 3.4rem 35.4rem 3.4rem 3.4rem;
+        .field {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          label {
+            font-size: 1.4rem;
+            font-weight: 500;
+          }
+          input {
+            width: 56%;
+            height: 3.2rem;
+            margin-bottom: 1.2rem;
+            border-radius: 7px;
+            border: 1px solid var(--color-grey-300);
+          }
+        }
+      }
+      .buttons {
+        margin-left: auto;
+        button {
+          padding: 0.8rem 1.6rem;
+          font-weight: 600;
+          background-color: var(--color-brand-600);
+          color: var(--color-brand-50);
+          border: 1px solid var(--color-grey-0);
+          border-radius: 5px;
+        }
+        button:hover {
+          color: var(--color-brand-50);
+          background-color: var(--color-brand-700);
+        }
+        .cancel {
+          background-color: var(--color-grey-0);
+          color: var(--color-grey-700);
+          border: 1px solid var(--color-grey-300);
+          margin-right: 5px;
+        }
+        .cancel:hover {
+          background-color: var(--color-grey-50);
+          color: var(--color-grey-600);
+        }
+      }
+    }
+  }
+}

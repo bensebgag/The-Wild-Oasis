@@ -1,0 +1,108 @@
+table {
+  width: 100%;
+  margin-top: 2.4rem;
+  border: 2px solid var(--color-grey-100);
+  .thead {
+    padding: 2.4rem;
+    tr {
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--color-grey-50);
+      border-bottom: 1px solid var(--color-grey-100);
+      padding: 1.2rem;
+      td {
+        font-size: 1.2rem;
+        width: 100%;
+        font-weight: 600;
+      }
+    }
+  }
+  .tbody {
+    padding: 2.4rem;
+    tr {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem;
+      background-color: var(--color-grey-0);
+      color: var(--color-grey-700);
+      td {
+        font-size: 1.2rem;
+        width: 100%;
+        font-weight: 600;
+      }
+      .gest {
+        display: flex;
+        flex-direction: column;
+      }
+      .dates {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .dotes {
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      li {
+        width: 4px;
+        height: 4px;
+        background-color: black;
+        border-radius: 50%;
+        margin-bottom: 2px;
+      }
+    }
+    .dotes:hover {
+      cursor: pointer;
+      background-color: var(--color-grey-100);
+    }
+    .options {
+      position: absolute;
+      z-index: 100;
+      padding: 1.2rem;
+      background-color: var(--color-grey-0);
+      box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 10px;
+      border-radius: 8px;
+      right: 6px;
+      bottom: -128px;
+      li {
+        button {
+          padding: 1.2rem 2.4rem;
+          font-weight: 600;
+          font-size: 1.2rem;
+          border: none;
+          color: var(--color-grey-700);
+          background-color: var(--color-grey-0);
+        }
+      }
+    }
+  }
+  .tfoot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+    span {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      button {
+        border: none;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 0.6rem 1.6rem;
+        color: var(--color-grey-700);
+        background-color: var(--color-grey-50);
+        border-radius: 5px;
+      }
+      button:hover {
+        color: var(--color-brand-50);
+        background-color: var(--color-brand-600);
+      }
+    }
+  }
+}
