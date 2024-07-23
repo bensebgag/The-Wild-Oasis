@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import bookingRouter from "./routes/bookingRoutes";
+import bookingRouter from "./routes/bookingRoutes.js";
 const app = express();
 dotenv.config();
 

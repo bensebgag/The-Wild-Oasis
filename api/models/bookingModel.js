@@ -15,14 +15,20 @@ const bookingSchema = new mongoose.Schema({
     required: true,
   },
   cabinId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Cabin",
+    type: Number,
     required: true,
   },
+  cabinRef: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Cabin",
+  },
   guestId: {
+    type: Number,
+    required: true,
+  },
+  guestRef: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Guest",
-    required: true,
   },
   hasBreakfast: {
     type: Boolean,
