@@ -1,23 +1,27 @@
 import "./Header.scss";
 import { FaRegUser } from "react-icons/fa6";
-import { TbLogout } from "react-icons/tb";
 import DarkmodeToggle from "../DarkmodeToggle";
-
+import Logout from "../Logout";
+import defualtUser from "../../data/default-user.jpg";
 export default function Header() {
+  interface USER {
+    fullName: string;
+  }
+  const user: USER = localStorage.getItem("user");
+  const userObject = JSON.parse(user);
+  console.log(user);
   return (
     <header>
       <div className="user-info">
-        <img
-          className="Avatar"
-          src="https://qfvpyreitzgxuimnvjpy.supabase.co/storage/v1/object/public/avatars/avatar-7aecf179-1878-4fdf-9ac1-6db28302239a-0.6508537473594862"
-          alt="avatar"
-        />
-        <span className="user-name">Alomin</span>
+        <img className="Avatar" src={defualtUser} alt="avatar" />
+        <span className="user-name">{userObject.fullName}</span>
       </div>
       <div className="icons-container">
-        <FaRegUser />
+        <button>
+          <FaRegUser />
+        </button>
         <DarkmodeToggle />
-        <TbLogout />
+        <Logout />
       </div>
     </header>
   );

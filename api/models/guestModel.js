@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const guestSchema = new mongoose.Schema({
   guestId: {
@@ -44,4 +44,4 @@ const guestSchema = new mongoose.Schema({
 // Create a model using the schema
 const Guest = mongoose.model("guestes", guestSchema);
 
-module.exports = Guest;
+export default Guest;

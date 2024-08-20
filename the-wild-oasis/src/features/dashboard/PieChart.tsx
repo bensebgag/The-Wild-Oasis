@@ -1,23 +1,24 @@
-// ExamplePieChart.tsx
 import { PureComponent } from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  ResponsiveContainer,
+  Tooltip,
+  TooltipProps,
+} from "recharts";
 
 // Define the type for the data items
 interface DataItem {
   name: string;
   value: number;
+  color: string;
+  duration: string;
 }
 
-const data: DataItem[] = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 },
-];
-
-const COLORS: string[] = ["#f97316", "#eab308", "#84cc16", "#14b8a6"];
-
-interface Props {}
+interface Props {
+  data: DataItem[];
+}
 
 interface State {}
 
@@ -26,6 +27,24 @@ export default class ExamplePieChart extends PureComponent<Props, State> {
     "https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o";
 
   render() {
+    const { data } = this.props;
+
+    // Define proper types for the CustomTooltip props
+    const CustomTooltip = ({
+      active,
+      payload,
+    }: TooltipProps<number, string>) => {
+      if (active && payload && payload.length) {
+        const dataItem = payload[0].payload as DataItem;
+        return (
+          <div className="custom-tooltip">
+            <p>{`${dataItem.duration}: ${dataItem.value}`}</p>
+          </div>
+        );
+      }
+      return null;
+    };
+
     return (
       <ResponsiveContainer width="65%" height={310}>
         <PieChart>
@@ -40,12 +59,10 @@ export default class ExamplePieChart extends PureComponent<Props, State> {
             dataKey="value"
           >
             {data.map((entry, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={COLORS[index % COLORS.length]}
-              />
+              <Cell key={`cell-${index}`} fill={entry.color} />
             ))}
           </Pie>
+          <Tooltip content={<CustomTooltip />} />
         </PieChart>
       </ResponsiveContainer>
     );

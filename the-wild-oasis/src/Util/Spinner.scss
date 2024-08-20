@@ -1,0 +1,35 @@
+.loader {
+  margin-top: -50rem;
+  width: 87px;
+  height: 87px;
+  border-radius: 50%;
+  border-top: 9px solid var(--color-brand-600);
+  border-right: 9px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.mini {
+  width: 26px;
+  height: 20px;
+  border-radius: 50%;
+  border-top: 2px solid var(--color-brand-50);
+  border-right: 2px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  display: inline-block;
+}
+.fullPage {
+  height: 100vh;
+  display: flex;
+  align-items: center; /*  */
+  justify-content: center;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -5,15 +5,17 @@ import { HiOutlineHomeModern } from "react-icons/hi2";
 import { FiUsers } from "react-icons/fi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useDarkMode } from "../../Context/DarkModeContext";
+import darkLogo from "../../data/logo-dark.png";
+import lightLogo from "../../data/logo-light.png";
 
 function SideBar() {
+  const { isDarkMode } = useDarkMode();
+  const pathImage = isDarkMode ? lightLogo : darkLogo;
+
   return (
     <div className="SideBar">
-      <img
-        className="logo"
-        src="https://the-wild-oasis-alamin.vercel.app/logo-dark.png"
-        alt="logo"
-      />
+      <img className="logo" src={pathImage} alt="logo" />
 
       <ul className="navigation">
         <Link to="/dashboard">
@@ -21,7 +23,7 @@ function SideBar() {
             <TiHomeOutline /> <span>Home</span>
           </li>
         </Link>
-        <Link to="/bookings">
+        <Link to={`/bookings`}>
           <li>
             <IoCalendarOutline /> <span>Bookings</span>
           </li>

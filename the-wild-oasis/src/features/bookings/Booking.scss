@@ -9,6 +9,23 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4.8rem;
+    .status {
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-right: 1.6rem;
+    }
+    .checked-in {
+      background-color: var(--color-green-100);
+      color: var(--color-green-700);
+    }
+    .checked-out {
+      color: var(--color-silver-700);
+      background-color: var(--color-silver-100);
+    }
+    .unconfirmed {
+      color: var(--color-blue-700);
+      background-color: var(--color-blue-100);
+    }
     button {
       font-size: 1.8rem;
       border: none;
@@ -26,21 +43,32 @@
     }
   }
   .body {
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-grey-100);
     &__head {
+      border-radius: 10px 10px 0 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 2.4rem 4.8rem;
-      color: var(--color-grey-0);
-      background-color: var(--color-brand-700);
+      color: rgb(224, 231, 255);
+      background-color: var(--color-brand-500);
       font-size: 1.6rem;
       font-weight: 500;
+      span {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        svg {
+          font-size: 2.4rem;
+        }
+      }
     }
     &__body {
       padding: 4.8rem;
+      border-radius: 0 0 10px 10px;
       display: flex;
       flex-direction: column;
+      background-color: var(--color-grey-0);
       .gest {
         display: flex;
         align-items: center;
@@ -51,6 +79,13 @@
       .breakfast {
         font-size: 1.8rem;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        svg {
+          font-size: 1.6rem;
+          color: var(--color-brand-600);
+        }
       }
       .price {
         display: flex;
@@ -64,11 +99,25 @@
         margin-bottom: 1.2rem;
         color: var(--color-yellow-700);
         div {
-          span:nth-child(2) {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          svg {
+            margin-right: 4px;
+            font-size: 1.6rem;
+            align-self: center;
+          }
+          /*   svg {
+          }
+          span:nth-child(3) {
             font-weight: 400;
             margin-left: 3.2rem;
-          }
+          } */
         }
+      }
+      .paid {
+        background-color: var(--color-green-100);
+        color: var(--color-green-700);
       }
       .booked_day {
         margin-left: auto;
@@ -114,8 +163,30 @@
     border: 1px solid var(--color-grey-300);
     margin-right: 5px;
   }
+  .notAllowed:hover {
+    cursor: not-allowed;
+    color: var(--color-brand-50);
+    background-color: var(--color-brand-700);
+  }
   .back:hover {
     background-color: var(--color-grey-50);
     color: var(--color-grey-600);
+  }
+  .checkbox {
+    border-radius: 10px;
+    margin-top: 3.2rem;
+    padding: 2.4rem 4.8rem;
+    background-color: var(--color-grey-0);
+    border: 1px solid var(--color-grey-100);
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-size: 1.4rem;
+      input {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
   }
 }

@@ -21,10 +21,16 @@
       &-header {
         .today-status__item-status {
           padding: 2px 8px;
-          background-color: var(--color-green-100);
-          color: var(--color-green-700);
           border-radius: 20px;
           margin-right: 1.6rem;
+        }
+        .Arriving {
+          background-color: var(--color-green-100);
+          color: var(--color-green-700);
+        }
+        .Departing {
+          color: var(--color-blue-700);
+          background-color: var(--color-blue-100);
         }
         .today-status__item-name {
           span {
@@ -50,5 +56,11 @@
         }
       }
     }
+  }
+  p {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 0.8rem;
   }
 }
