@@ -55,10 +55,10 @@ function TodayStatus({ ToDayBooking }: props) {
                   <div className="today-status__item-header">
                     <span
                       className={`today-status__item-status  ${
-                        b.status === "unconfirmed" ? "ARRIVING" : "Departing"
+                        b.status === "unconfirmed" ? "Arriving" : "Departing"
                       }`}
                     >
-                      {b.status === "unconfirmed" ? "ARRIVING" : "Departing"}{" "}
+                      {b.status === "unconfirmed" ? "Arriving" : "Departing"}{" "}
                     </span>
                     <span className="today-status__item-name">
                       <span className="fleg">fleg</span> {b.guestRef.fullName}
@@ -72,7 +72,7 @@ function TodayStatus({ ToDayBooking }: props) {
                       onClick={() => handleCheck(b)}
                       className="today-status__item-button"
                     >
-                      {b.status === "check In" ? "CHECKED IN" : "CHEKED OUT"}
+                      {b.status === "check In" ? "CHECKED OUT" : "CHEKED IN"}
                     </button>
                   </div>
                 </li>
