@@ -96,7 +96,7 @@ export const isAuthenticated = catchAsync(async (req, res) => {
     });
   }
   const decoded = await promisify(jwt.verify)(token, process.env.SECRET_JWT);
-
+  console.log(decoded);
   const currentUser = await User.findById(decoded.id);
   if (!currentUser) {
     res.status(400).json({
